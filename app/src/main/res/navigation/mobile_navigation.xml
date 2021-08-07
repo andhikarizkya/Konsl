@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.konsl.user.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_educations"
+            app:destination="@id/navigation_educations" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_consultations"
+            app:destination="@id/navigation_consultations" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_consultations"
+        android:name="com.example.konsl.user.ui.consultations.ConsultationsFragment"
+        android:label="@string/title_consultations"
+        tools:layout="@layout/fragment_consultations" />
+
+    <fragment
+        android:id="@+id/navigation_educations"
+        android:name="com.example.konsl.user.ui.educations.EducationsFragment"
+        android:label="@string/title_educations"
+        tools:layout="@layout/fragment_educations" />
+</navigation>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.konsl">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Konsl">
+        <activity android:name=".admin.ui.articles.edit.EditArticleActivity"></activity>
+        <activity android:name=".admin.ui.articles.create.CreateArticleActivity" />
+        <activity android:name=".admin.AdminHomeActivity" />
+        <activity android:name=".user.ui.profile.edit.EditProfileActivity" />
+        <activity android:name=".user.ui.profile.ProfileActivity" />
+        <activity android:name=".user.ui.consultations.chat.ConsultationUserChatActivity" />
+        <activity android:name=".psychologist.ui.consultations.confirmed.chat.ConsultationCounselorChatActivity" />
+        <activity android:name=".psychologist.ui.consultations.request.detail.ConsultationRequestDetailActivity" />
+        <activity android:name=".psychologist.PsychologistHomeActivity" />
+        <activity android:name=".user.ui.consultations.request.RequestConsultationActivity" />
+        <activity android:name=".user.ui.educations.detail.ArticleDetailActivity" />
+        <activity
+            android:name=".user.UserHomeActivity"
+            android:label="@string/title_activity_user_home" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

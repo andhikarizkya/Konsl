@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "110876084382",
+    "firebase_url": "https://konsl-project.firebaseio.com",
+    "project_id": "konsl-project",
+    "storage_bucket": "konsl-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:110876084382:android:a96bc22132082ee17d938f",
+        "android_client_info": {
+          "package_name": "com.example.konsl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "110876084382-vsq1ko4shc19gj83u9vorajph5eq78v6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKNA7b9ULAJ4xe8Me_CVsYHzePu3qVh_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "110876084382-vsq1ko4shc19gj83u9vorajph5eq78v6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

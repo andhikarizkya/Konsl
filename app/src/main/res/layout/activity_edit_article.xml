@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.ui.articles.edit.EditArticleActivity">
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@id/editorToolbar">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/etTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/title"
+                android:inputType="textCapWords|textMultiLine"
+                android:paddingStart="16dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="16dp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etTitle">
+
+                <ImageView
+                    android:id="@+id/imgThumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:adjustViewBounds="true"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+                <Button
+                    android:id="@+id/btnUploadPhoto"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:onClick="uploadPhoto"
+                    android:text="@string/change_thumbnail" />
+            </LinearLayout>
+
+            <jp.wasabeef.richeditor.RichEditor
+                android:id="@+id/editor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            </jp.wasabeef.richeditor.RichEditor>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <HorizontalScrollView
+        android:id="@+id/editorToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ededed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/actionUndo"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_baseline_undo_24" />
+
+            <ImageButton
+                android:id="@+id/actionRedo"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_baseline_redo_24" />
+
+            <ImageButton
+                android:id="@+id/actionBold"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_baseline_format_bold_24" />
+
+            <ImageButton
+                android:id="@+id/actionItalic"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_baseline_format_italic_24" />
+
+            <ImageButton
+                android:id="@+id/actionUnderline"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_baseline_format_underlined_24" />
+
+            <ImageButton
+                android:id="@+id/actionStrikethrough"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_baseline_format_strikethrough_24" />
+
+            <ImageButton
+                android:id="@+id/actionHeading1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_h1" />
+
+            <ImageButton
+                android:id="@+id/actionHeading2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_h2" />
+
+            <ImageButton
+                android:id="@+id/actionHeading3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_h3" />
+
+            <ImageButton
+                android:id="@+id/actionIndent"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_baseline_format_indent_increase_24" />
+
+            <ImageButton
+                android:id="@+id/actionOutdent"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_baseline_format_indent_decrease_24" />
+
+            <ImageButton
+                android:id="@+id/actionAlignLeft"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_baseline_format_align_left_24" />
+
+            <ImageButton
+                android:id="@+id/actionAlignCenter"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_baseline_format_align_center_24" />
+
+            <ImageButton
+                android:id="@+id/actionAlignRight"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_baseline_format_align_right_24" />
+
+            <ImageButton
+                android:id="@+id/actionInsertBullets"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_baseline_format_list_bulleted_24" />
+
+            <ImageButton
+                android:id="@+id/actionInsertNumbers"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_baseline_format_list_numbered_24" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
